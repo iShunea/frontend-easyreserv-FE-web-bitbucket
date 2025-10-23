@@ -1,0 +1,227 @@
+/* Following the existing modal pattern from Receipt component */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 800px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.closeButton {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: #374151;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 40px;
+  color: #dc2626;
+}
+
+.retryButton {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.retryButton:hover {
+  background: #2563eb;
+}
+
+.section {
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 20px;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f9fafb;
+  font-size: 14px;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailRow span:first-child {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.detailRow span:last-child {
+  font-weight: 500;
+  color: #111827;
+  text-align: right;
+}
+
+.orderCard {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.orderTitle {
+  font-weight: 600;
+  color: #111827;
+  font-size: 14px;
+}
+
+.orderPrice {
+  font-weight: 700;
+  color: #059669;
+  font-size: 14px;
+}
+
+.orderDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.preorderBadge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.totalPrice {
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.totalPrice .detailRow {
+  font-size: 16px;
+  font-weight: 700;
+  color: #059669;
+  border-bottom: none;
+}
+
+.noOrders {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modalContent {
+    margin: 10px;
+    max-width: 95%;
+  }
+  
+  .detailRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .detailRow span:last-child {
+    text-align: left;
+  }
+}

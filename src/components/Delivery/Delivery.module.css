@@ -1,0 +1,116 @@
+.HeadContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.FixedHead {
+  display: flex;
+  height: 94px;
+  width: 92%;
+  padding: 20px 10px;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  background: var(--Brand-Snow, #FFF);
+  box-shadow: 8px 8px 80px 0px rgba(0, 0, 0, 0.04);
+  position: fixed; 
+  top: 0; 
+}
+
+.Heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+.Title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.TitleText {
+  color: var(--Brand-Charcoal, var(--Brand-Charcoal, #020202));
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -0.64px;
+}
+
+.HeadActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;;
+}
+
+.TableHead {
+  display: flex;
+  padding: 16px 1px;
+  align-items: flex-start;
+  gap: 50px;
+  align-self: stretch;
+  background: var(--Brand-Snow, #FFF);
+  position: relative;
+}
+
+.HeaderItem {
+  color: var(--Brand-Charcoal, var(--Brand-Charcoal, #020202));
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+  opacity: 0.35;
+  white-space: nowrap;
+}
+
+.Title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.TitleText {
+  color: var(--Brand-Charcoal, var(--Brand-Charcoal, #020202));
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; 
+  letter-spacing: -0.64px;
+}
+
+.HeadActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.AddItemButton {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    background: var(--Brand-Sun, #FE9800);
+    color: var(--Brand-Snow, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .AddItemButton:hover {
+    background-color: #FF8C00;
+  }
